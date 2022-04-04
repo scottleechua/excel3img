@@ -5,7 +5,7 @@ env:
     PYTEST_SKIP_EXCEL=yes
 script:
     - py.test
-    - python excel2img/excel2img.py
+    - python excel3img/excel3img.py
 
 jobs:
   include:

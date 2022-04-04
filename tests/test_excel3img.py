@@ -5,11 +5,11 @@ mypath = os.path.dirname(__file__)
 os.chdir(mypath)
 
 def run_sheet(sheet_name):
-    import excel2img
+    import excel3img
     fnout = sheet_name + ".png"
     if os.path.exists(fnout): os.unlink(fnout)
     try:
-        excel2img.export_img("test.xlsx", fnout, sheet_name)
+        excel3img.export_img("test.xlsx", fnout, sheet_name)
     except OSError as e:
         if "Failed to start Excel" in str(e) and os.environ.get("PYTEST_SKIP_EXCEL"):
             # Waive Excel functionality on Travis
@@ -27,9 +27,9 @@ def test_chart_sheet():
     run_sheet('Chart1')
 
 def test_bad_extension():
-    import excel2img
+    import excel3img
     try:
-        excel2img.export_img("test.xlsx", "abc.xyz", "Sheet1", None)
+        excel3img.export_img("test.xlsx", "abc.xyz", "Sheet1", None)
     except ValueError as e:
         if 'Unsupported image format' in str(e): return # success
     assert 0, "ValueError('Unsupported image format .XYZ') should have been thrown"

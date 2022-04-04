@@ -1,15 +1,3 @@
-.. image:: https://img.shields.io/travis/glexey/excel2img.svg
-    :target: https://travis-ci.org/glexey/excel2img
-
-.. image:: https://img.shields.io/pypi/pyversions/excel2img.svg
-    :target: https://pypi.org/project/excel2img
-
-.. image:: https://img.shields.io/pypi/v/excel2img.svg
-    :target: https://pypi.org/project/excel2img
-
-.. image:: https://img.shields.io/pypi/dm/excel2img.svg
-    :target: https://pypi.org/project/excel2img
-
 excel3img
 =========
 
@@ -30,23 +18,23 @@ Installation
 
 .. code:: shell
 
-    pip install excel2img
+    pip install excel3img
 
 Usage as python module
 ----------------------
 
 .. code:: python
 
-    import excel2img
+    import excel3img
 
     # Save as PNG the range of used cells in test.xlsx on page named "Sheet1"
-    excel2img.export_img("test.xlsx", "test.png", "Sheet1", None)
+    excel3img.export_img("test.xlsx", "test.png", "Sheet1", None)
 
     # Save as BMP the range B2:C15 in test.xlsx on page named "Sheet2"
-    excel2img.export_img("test.xlsx", "test.bmp", "", "Sheet2!B2:C15")
+    excel3img.export_img("test.xlsx", "test.bmp", "", "Sheet2!B2:C15")
 
     # Save as GIF the range "MyNamedRange"
-    excel2img.export_img("test.xlsx", "test.gif", "", "MyNamedRange")
+    excel3img.export_img("test.xlsx", "test.gif", "", "MyNamedRange")
 
 Usage from command line
 -----------------------
@@ -54,22 +42,24 @@ Usage from command line
 .. code:: shell
 
     # Save as PNG the range of used cells in test.xlsx on first page
-    python excel2img.py test.xlsx test.png
+    python excel3img.py test.xlsx test.png
 
     # Save as PNG the range of used cells in test.xlsx on page "Sheet2"
-    python excel2img.py test.xlsx test.png -p Sheet2
+    python excel3img.py test.xlsx test.png -p Sheet2
 
     # Save as PNG the range "MyNamedRange"
-    python excel2img.py test.xlsx test.png -r MyNamedRange
+    python excel3img.py test.xlsx test.png -r MyNamedRange
 
     # More range syntax examples
-    python excel2img.py test.xlsx test.gif -r 'Sheet3!B5:C8'
-    python excel2img.py test.xlsx test.bmp -r 'Sheet4!SheetScopedNamedRange'
+    python excel3img.py test.xlsx test.gif -r 'Sheet3!B5:C8'
+    python excel3img.py test.xlsx test.bmp -r 'Sheet4!SheetScopedNamedRange'
 
 Author
 =======
 
-Alexey Gaydyukov <glexey@gmail.com>
+`excel2img` by Alexey Gaydyukov <glexey@gmail.com>
+
+`excel3img` fork maintained by Scott Lee Chua <scottleechua@gmail.com>
 
 License
 ========
