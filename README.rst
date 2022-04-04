@@ -57,9 +57,9 @@ Usage from command line
 Author
 =======
 
-`excel2img` by Alexey Gaydyukov <glexey@gmail.com>
+excel2img by Alexey Gaydyukov <glexey@gmail.com>
 
-`excel3img` fork maintained by Scott Lee Chua <scottleechua@gmail.com>
+excel3img fork maintained by Scott Lee Chua <scottleechua@gmail.com>
 
 License
 ========
