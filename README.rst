@@ -10,8 +10,10 @@
 .. image:: https://img.shields.io/pypi/dm/excel2img.svg
     :target: https://pypi.org/project/excel2img
 
-excel2img
+excel3img
 =========
+
+**A functioning fork of the [excel2img](https://github.com/glexey/excel2img) package by Alexey Gaydyukov.**
 
 Save ranges from Excel documents as images
 
