@@ -13,7 +13,7 @@
 excel3img
 =========
 
-**A functioning fork of the [excel2img](https://github.com/glexey/excel2img) package by Alexey Gaydyukov.**
+**A functioning fork of the `excel2img <https://github.com/glexey/excel2img>`__ package by Alexey Gaydyukov.**
 
 Save ranges from Excel documents as images
 
