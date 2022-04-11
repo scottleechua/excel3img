@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: excel3img
-Version: 1.4.1.dev7
+Version: 1.5.0.dev11
 Summary: A functioning fork of excel2img. Save ranges from Excel documents as images
 Home-page: https://github.com/scottleechua/excel3img
 Author: Scott Lee Chua
@@ -27,6 +27,7 @@ Classifier: Topic :: Office/Business :: Office Suites
 Classifier: Topic :: Software Development :: Libraries :: Python Modules
 Classifier: Topic :: Utilities
 License-File: LICENSE
+License-File: AUTHORS
 
 A functioning fork of excel2img. Save ranges from Excel documents as images
 
