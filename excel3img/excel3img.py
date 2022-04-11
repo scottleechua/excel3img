@@ -85,25 +85,25 @@ def export_img(fn_excel, fn_image, page=None, _range=None):
         if _range is None:
             if page is None: page = 1
             try:
-                rng = excel.workbook.Sheets("'%s'"%(page)).UsedRange
+                rng = excel.workbook.Sheets("%s"%page).UsedRange
             except com_error:
-                raise Exception("Failed locating used cell range on page '%s'"%(page))
+                raise Exception("Failed locating used cell range on page %s"%page)
             except AttributeError:
                 # This might be a "chart page", try exporting it as a whole
-                rng = excel.workbook.Sheets("'%s'"%(page)).Export(os.path.abspath(fn_image))
+                rng = excel.workbook.Sheets("%s"%page).Export(os.path.abspath(fn_image))
                 return
             if str(rng) == "None":
                 # No used cells on a page. maybe there's a single object.. try simply exporting as png
-                shapes = excel.workbook.Sheets("'%s'"%(page)).Shapes
+                shapes = excel.workbook.Sheets("%s"%page).Shapes
                 if len(shapes) == 1:
                     rng = shapes[0]
                 else:
                     raise Exception("Failed locating used cells or single object to print on page '%s'"%(page))
         else:
             try:
-                rng = excel.workbook.Application.Range("'%s'"%(_range))
+                rng = excel.workbook.Application.Range("%s"%_range)
             except com_error:
-                raise Exception("Failed locating range '%s'"%(_range))
+                raise Exception("Failed locating range %s"%_range)
 
         # excel.workbook.Activate() # Trying to solve intermittent CopyPicture failure (didn't work, only becomes worse)
         # rng.Parent.Activate()     # http://answers.microsoft.com/en-us/msoffice/forum/msoffice_excel-msoffice_custom/
