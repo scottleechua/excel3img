@@ -1,0 +1,91 @@
+CHANGES
+=======
+
+* Update readme
+* Update name to excel3img
+* Update README.rst
+* Update and rename README.md to README.rst
+* Rename README.rst to README.md
+* Update README.rst
+* Fix "Object has no attribute 'parent'"
+
+1.4
+---
+
+* Added more pypi shield badges
+* Added 'chart page' export capability
+
+1.3.9
+-----
+
+* Fixing deploy stage
+
+1.3.8
+-----
+
+* Added python install to deploy stage
+
+1.3.7
+-----
+
+* Fixing deployment condition
+
+1.3.6
+-----
+
+* Conditional deploy stage
+* Single out deployment stage
+
+1.3.5
+-----
+
+* Single out deployment stage
+
+1.3.4
+-----
+
+* deployment password update
+
+1.3.3
+-----
+
+* deployment password update
+
+1.3.2
+-----
+
+* Removed version.py from the repo
+* Setup auto-version from git
+* Added build badge
+
+1.3.1
+-----
+
+* Added python2 (even though travis pkg install fails)
+* Waive Excel functionality on Travis
+* Basic testing
+* Basic testing
+* Trying windows travis
+* Trying windows travis
+* Support spaces in the sheet names, when combined with range
+* Python3 install bug fix
+* Another stab at CopyPicture failure
+* Don't import excel2img inside setup to avoid dependency race condition
+* Version bump
+* Close Excel object on crash. Use CoInitialize/CoUnInitialize
+* Added 'pip install' instructions
+* Bumped retries number to 100
+* Added \_\_version\_\_ attribute
+* Work-around for CopyPicture failing when large Excel documents are open on the Desktop
+* Support for python 3.x. Moved imports to the top (fix com\_error import bug)
+* Fix MANIFEST.in
+* Finishing pypi preparation
+* Finishing pypi preparation
+* Finishing pypi preparation
+* Convert README from markdown to rst as pypi doesn't accept markdown
+* Convert README from markdown to rst as pypi doesn't accept markdown
+* Preparing for pypi
+* Update LICENSE
+* Update README.md
+* Repo populated
+* Initial commit
