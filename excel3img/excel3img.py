@@ -79,7 +79,7 @@ def export_img(fn_excel, fn_image, page=None, _range=None):
 
     # if both page and page-less range are specified, concatenate them into range
     if _range is not None and page is not None and '!' not in _range:
-        _range = "'%s'!'%s'"%(page, _range)
+        _range = "'%s'!%s"%(page, _range)
 
     with ExcelFile.open(fn_excel) as excel:
         if _range is None:
@@ -101,9 +101,9 @@ def export_img(fn_excel, fn_image, page=None, _range=None):
                     raise Exception("Failed locating used cells or single object to print on page '%s'"%(page))
         else:
             try:
-                rng = excel.workbook.Application.Range("%s"%_range)
+                rng = excel.workbook.Application.Range("%s"%(_range))
             except com_error:
-                raise Exception("Failed locating range %s"%_range)
+                raise Exception("Failed locating range %s"%(_range))
 
         # excel.workbook.Activate() # Trying to solve intermittent CopyPicture failure (didn't work, only becomes worse)
         # rng.Parent.Activate()     # http://answers.microsoft.com/en-us/msoffice/forum/msoffice_excel-msoffice_custom/

@@ -27,13 +27,13 @@ Usage as python module
 
     import excel3img
 
-    # Save as PNG the range of used cells in test.xlsx on page named "Sheet1"
-    excel3img.export_img("test.xlsx", "test.png", "Sheet1", None)
+    # Save as PNG the range of used cells in test.xlsx on sheet named "Sheet-1"
+    excel3img.export_img("test.xlsx", "test.png", "Sheet-1")
 
-    # Save as BMP the range B2:C15 in test.xlsx on page named "Sheet2"
-    excel3img.export_img("test.xlsx", "test.bmp", "", "Sheet2!B2:C15")
+    # Save as BMP the range B2:C15 in C:Users\admin\test.xlsx on sheet named "Sheet2"
+    excel3img.export_img(r"C:Users\admin\test.xlsx", "test.bmp", "Sheet2", "B2:C15")
 
-    # Save as GIF the range "MyNamedRange"
+    # Save as GIF the range "MyNamedRange" in test.xlsx
     excel3img.export_img("test.xlsx", "test.gif", "", "MyNamedRange")
 
 Usage from command line
@@ -41,18 +41,14 @@ Usage from command line
 
 .. code:: shell
 
-    # Save as PNG the range of used cells in test.xlsx on first page
+    # Save as PNG the range of used cells in test.xlsx on first sheet
     python excel3img.py test.xlsx test.png
 
-    # Save as PNG the range of used cells in test.xlsx on page "Sheet2"
-    python excel3img.py test.xlsx test.png -p Sheet2
-
-    # Save as PNG the range "MyNamedRange"
-    python excel3img.py test.xlsx test.png -r MyNamedRange
-
-    # More range syntax examples
-    python excel3img.py test.xlsx test.gif -r 'Sheet3!B5:C8'
-    python excel3img.py test.xlsx test.bmp -r 'Sheet4!SheetScopedNamedRange'
+    # Save as BMP the range A1:D4 in C:Users\admin\test.xlsx on sheet named "Sheet3"
+    python excel3img.py "C:\Users\admin\test.xlsx" test.bmp -p Sheet3 -r A1:D4
+    
+    # Save as GIF the range "MyNamedRange" in test.xlsx
+    python excel3img.py test.xlsx test.gif -r MyNamedRange
 
 Author
 =======
